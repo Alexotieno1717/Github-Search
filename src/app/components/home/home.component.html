@@ -29,12 +29,17 @@
                 
                     <div class="cards d-flex">
                         <div id="repo" class="card mt-2" *ngFor="let repos of repo" style="width: 30rem;">
-                            <p>{{repos.name}}</p>
-                            <hr>
-                            
-                            <a target="_blank" href="{{repo.repos_url}}">such</a>
-                            <a class="btn btn-info" target="_blank" href="{{repos.html_url}}">Visit Repo</a>
-                            <p> {{ repos.description}} </p>
+                            <div class="card-header">
+                                <h3 class="card-title">{{repos.name}}</h3>
+                            </div>
+                            <div class="card-body">
+                                <p> {{ repos.description}} </p>
+                            </div>
+                            <!-- <a target="_blank" href="{{repo.repos_url}}">such</a> -->
+                            <!-- <a target="_blank" href="{{repos.html_url}}"><button class="btn btn-info">Visit Repo</button></a> -->
+                            <div class="card-footer">
+                                <a target="_blank" href="{{repos.html_url}}"><button class="btn btn-info">Visit this project on Github</button></a>
+                            </div>
                         </div>
                     </div>
                 </div>
