@@ -29,12 +29,6 @@ export class GitSearchService {
       repos_url:string,
       created_at:Date,
     }
-    // let promise = new promise((resolve, reject)=>{
-    //   this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe(data=>{
-    //   // Succesful API request
-    //   // this.quote = new Quote(data.author, data.quote)
-    // })
-    // })
     let promise = new Promise((resolve, reject) => {
       let apiURL = 'https://api.github.com/users/' + userName + '?access_token=' + environment.apikey;
       this.http.get<ApiResponse>(apiURL)
