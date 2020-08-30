@@ -1,10 +1,10 @@
 <div class="container">
     <h2>Repositories</h2>
 
-    <div *ngFor="let repos of repo">
+    <div id="repo" class="card mt-2" *ngFor="let repos of repo">
         
         {{repos.name}}
-        <a href="{{repo.repos_url}}">such</a>
+        <a target="_blank" href="{{repo.repos_url}}">such</a>
         <a class="btn btn-info" target="_blank" href="{{repos.html_url}}">Visit Repo</a>
         <p> {{ repos.description}} </p>
     </div>
