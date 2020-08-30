@@ -5,19 +5,16 @@ import { FormsModule } from '@angular/forms/';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserComponent } from './components/user/user.component';
-import { RepoComponent } from './components/repo/repo.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { from } from 'rxjs';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
-    RepoComponent,
     HomeComponent,
     SearchFormComponent,
   ],

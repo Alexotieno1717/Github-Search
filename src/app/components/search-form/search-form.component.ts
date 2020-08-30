@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
+
 @Component({
   selector: 'app-search-form',
   templateUrl: './search-form.component.html',
@@ -18,7 +19,7 @@ export class SearchFormComponent implements OnInit {
   }
   search(){
     this.searchEmitter.emit(this.userName);
-    // this.userName='';
+    this.userName='';
   }
 
 }

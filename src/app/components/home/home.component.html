@@ -2,13 +2,39 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 pt-4">
-                <app-search-form ></app-search-form>
+                <app-search-form (searchEmitter)="getUsers($event)"></app-search-form>
+            </div>
+            <div class="col-md-12 pt-3">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ user.avatar_url }}">
+                        <p> <span>Bio:</span> {{user.bio}} </p>
+                    </div>
+                    <div class="col-md-4 pt-5">
+                        <h2>Personal Profile</h2>
+                        <p> <span>Full Name: </span> {{user.name}}</p>
+                        <p *ngIf="user.login">
+                            <span>Username: </span>
+                            {{ user.login }}
+                        </p>
+                        <p> followers: {{user.followers}}</p>
+                        <p> Following: {{user.following}}</p>
+                        <p> {{ user.created_at }} </p>
+                    </div>
+                </div>
             </div>
             <div class="col-md-12">
-                <app-user></app-user>
-            </div>
-            <div class="col-md-12">
-                <app-repo></app-repo>
+                <div class="container">
+                    <h2>Repositories</h2>
+                
+                    <div id="repo" class="card mt-2" *ngFor="let repos of repo">
+                        
+                        {{repos.name}}
+                        <a target="_blank" href="{{repo.repos_url}}">such</a>
+                        <a class="btn btn-info" target="_blank" href="{{repos.html_url}}">Visit Repo</a>
+                        <p> {{ repos.description}} </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
