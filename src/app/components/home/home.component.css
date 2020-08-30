@@ -1,0 +1,10 @@
+/* #repo{
+    padding: 10px;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+} */
+.cards{
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
