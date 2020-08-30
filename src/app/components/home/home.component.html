@@ -9,8 +9,14 @@
                 <div class="row">
                     <div class="col-md-6">
                         <img src="{{ user.avatar_url }}">
-                        <p><i class="fa fa-user pt-3" style="font-size:18px"></i> {{user.name}}</p>
-                        <a class="btn btn-info btn-sm" href="{{user.html_url}}" target="_blank"> <i class=""></i> github </a>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <p><i class="fa fa-user pt-4" style="font-size:18px"></i> {{user.name}}</p>
+                            </div>
+                            <div class="col-md-8 mt-3">
+                                <a class="btn btn-info btn-sm" href="{{user.html_url}}" target="_blank"> <img src="https://img.icons8.com/ios-glyphs/20/000000/github.png"/> Visit github Profile </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-4 pt-5">
                         <h2>Personal Profile</h2>
