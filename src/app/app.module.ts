@@ -12,6 +12,7 @@ import { SearchFormComponent } from './components/search-form/search-form.compon
 import { from } from 'rxjs';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,8 +24,8 @@ import { from } from 'rxjs';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule,
-    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
