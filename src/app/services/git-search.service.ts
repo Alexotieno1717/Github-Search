@@ -14,12 +14,13 @@ export class GitSearchService {
   repo:Repo;
 
   constructor(private http:HttpClient) { 
-    this.user= new User("","","","","","","",new Date());
+    this.user= new User("","","","","","","","",new Date());
     this.repo = new Repo("","","","",0);
   }
 
   getUsers(userName:string){
     interface ApiResponse{
+      public_repos:string,
       login:string,
       bio:string,
       name:string,

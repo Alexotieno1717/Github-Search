@@ -18,8 +18,16 @@
                             {{ user.login }}
                         </p>
                         <p> followers: {{user.followers}}</p>
-                        <p> Following: {{user.following}}</p>
+                        <!-- <p> Following: {{user.following}}</p> -->
                         <p> {{ user.created_at }} </p>
+                        <p><i class="fa fa-file-o" style="font-size:18px"></i>&nbsp;&nbsp; Repositories:&nbsp;&nbsp; <span class="follow">{{user.public_repos}}</span></p>
+                        <hr>
+                        <p> <i class="fa fa-user" style="font-size:18px"></i>&nbsp;&nbsp; Following:&nbsp;&nbsp; <span class="follow">{{user.following}}</span></p>
+                        <hr>
+                        <p> <i class="fa fa-users"style="font-size:18px"></i>&nbsp;&nbsp; Followers:&nbsp;&nbsp; <span class="follow">{{user.followers}}</span></p>
+                        <hr>
+                        <p><i class="fa fa-clock-o" style="font-size:18px"></i>&nbsp;&nbsp; Joined:&nbsp;&nbsp; <span class="datejoined">{{user.created_at | datePipe}}</span></p>
+                        <hr>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 export class User {
     constructor(
+        public public_repos:any,
         public login:any,
         public bio:any,
         public name:any,
