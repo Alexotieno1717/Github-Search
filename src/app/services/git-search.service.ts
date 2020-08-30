@@ -22,7 +22,7 @@ export class GitSearchService {
     interface ApiResponse{
       public_repos:string,
       login:string,
-      bio:string,
+      html_url:string,
       name:string,
       avatar_url: string,
       followers:string,

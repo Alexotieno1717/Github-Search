@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
 <div class="container-fluid">
     <div class="container">
         <div class="row">
@@ -8,19 +9,20 @@
                 <div class="row">
                     <div class="col-md-6">
                         <img src="{{ user.avatar_url }}">
-                        <p> <span>Bio:</span> {{user.bio}} </p>
+                        <p><i class="fa fa-user pt-3" style="font-size:18px"></i> {{user.name}}</p>
+                        <a class="btn btn-info btn-sm" href="{{user.html_url}}" target="_blank"> <i class=""></i> github </a>
                     </div>
                     <div class="col-md-4 pt-5">
                         <h2>Personal Profile</h2>
                         <p *ngIf="user.login">&nbsp;&nbsp; Github Name:&nbsp;&nbsp; <span class="follow">{{ user.login }}</span></p>
                         <hr>
-                        <p><i class="fa fa-file-o" style="font-size:18px"></i>&nbsp;&nbsp; Repositories:&nbsp;&nbsp; <span class="follow">{{user.public_repos}}</span></p>
+                        <p><i class="fa fa-file" style="font-size:18px"></i>&nbsp;&nbsp; Repositories:&nbsp;&nbsp; <span class="follow">{{user.public_repos}}</span></p>
                         <hr>
                         <p> <i class="fa fa-user" style="font-size:18px"></i>&nbsp;&nbsp; Following:&nbsp;&nbsp; <span class="follow">{{user.following}}</span></p>
                         <hr>
                         <p> <i class="fa fa-users"style="font-size:18px"></i>&nbsp;&nbsp; Followers:&nbsp;&nbsp; <span class="follow">{{user.followers}}</span></p>
                         <hr>
-                        <p><i class="fa fa-clock-o" style="font-size:18px"></i>&nbsp;&nbsp; Joined:&nbsp;&nbsp; <span class="datejoined">{{user.created_at | datePipe}}</span></p>
+                        <p><i class="fa fa-clock" style="font-size:18px"></i>&nbsp;&nbsp; Joined:&nbsp;&nbsp; <span class="datejoined">{{user.created_at | datePipe}}</span></p>
                         <hr>
                     </div>
                 </div>
