@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
-<div class="container-fluid">
+<div class="container-fluid p-0 m-0">
+    <app-navbar></app-navbar>
     <div class="container">
         <div class="row">
             <div class="col-md-12 pt-4">
@@ -11,25 +12,27 @@
                         <img src="{{ user.avatar_url }}">
                         <div class="row">
                             <div class="col-md-4">
-                                <p><i class="fa fa-user-circle pt-4" style="font-size:18px"></i> {{user.name}}</p>
+                                <p class="username"><i class="fa fa-user-circle pt-4" style="font-size:18px; font-weight: bold;"></i> {{ user.login }}</p>
                             </div>
                             <div class="col-md-8 mt-3">
                                 <a class="btn btn-info btn-sm" href="{{user.html_url}}" target="_blank"> <img src="https://img.icons8.com/ios-glyphs/20/000000/github.png"/> View Profile on github</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 pt-5">
-                        <h2>Personal Profile</h2>
-                        <p *ngIf="user.login">&nbsp;&nbsp; Github User Name:&nbsp;&nbsp; <span class="follow">{{ user.login }}</span></p>
-                        <hr>
-                        <p><i class="fa fa-file" style="font-size:18px"></i>&nbsp;&nbsp; Repositories:&nbsp;&nbsp; <span class="follow">{{user.public_repos}}</span></p>
-                        <hr>
-                        <p> <i class="fa fa-user-circle" style="font-size:18px"></i>&nbsp;&nbsp; Following:&nbsp;&nbsp; <span class="follow">{{user.following}}</span></p>
-                        <hr>
-                        <p> <i class="fa fa-users"style="font-size:18px"></i>&nbsp;&nbsp; Followers:&nbsp;&nbsp; <span class="follow">{{user.followers}}</span></p>
-                        <hr>
-                        <p><i class="fa fa-clock" style="font-size:18px"></i>&nbsp;&nbsp; Created:&nbsp;&nbsp; <span class="datejoined">{{user.created_at | datePipe}}</span></p>
-                        <hr>
+                    <div class="col-md-4 pt-5"> 
+                        <div id="profile">
+                            <h2>Personal Profile</h2>
+                            <!-- <p *ngIf="user.login">&nbsp;&nbsp; Github User Name:&nbsp;&nbsp; <span class="follow">{{ user.login }}</span></p> -->
+                            <hr>
+                            <p><i class="fa fa-file" style="font-size:18px"></i>&nbsp;&nbsp; Repositories:&nbsp;&nbsp; <span class="follow">{{user.public_repos}}</span></p>
+                            <hr>
+                            <p> <i class="fa fa-user-circle" style="font-size:18px"></i>&nbsp;&nbsp; Following:&nbsp;&nbsp; <span class="follow">{{user.following}}</span></p>
+                            <hr>
+                            <p> <i class="fa fa-users"style="font-size:18px"></i>&nbsp;&nbsp; Followers:&nbsp;&nbsp; <span class="follow">{{user.followers}}</span></p>
+                            <hr>
+                            <p><i class="fa fa-clock" style="font-size:18px"></i>&nbsp;&nbsp; Created:&nbsp;&nbsp; <span class="datejoined">{{user.created_at | datePipe}}</span></p>
+                            <hr>
+                        </div>
                     </div>
                 </div>
             </div>

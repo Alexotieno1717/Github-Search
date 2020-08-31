@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { from } from 'rxjs';
 import { DatePipePipe } from './date-pipe.pipe';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 
@@ -19,6 +20,7 @@ import { DatePipePipe } from './date-pipe.pipe';
     HomeComponent,
     SearchFormComponent,
     DatePipePipe,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
