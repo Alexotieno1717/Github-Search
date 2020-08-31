@@ -35,8 +35,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Installation / Setup instruction
 * Open Terminal {Ctrl+Alt+T}
-* git clone 
-* cd github-search
+* git clone https://github.com/Alexotieno1717/Github-Search
+* cd Github-Search
 * code . or atom . based on the text editor you have.
 
 ## Known Bugs
